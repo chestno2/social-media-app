@@ -1,7 +1,7 @@
 import { getProviders, signIn as SignIntoProvider } from "next-auth/react"
 
 export default function signIn({ providers }) {
-    console.log(providers);
+
     return (
         <>
             {Object.values(providers).map((provider) => (

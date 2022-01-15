@@ -16,7 +16,7 @@ function Header() {
 
     const { data: session } = useSession()
 
-    console.log(session);
+
 
     return (
         <div className=" shadow-sm border-b bg-white z-50 top-0 sticky" >
@@ -53,7 +53,7 @@ function Header() {
                     <UserGroupIcon className="navBtn" />
                     <HeartIcon className=" navBtn " />
 
-                    <img src="https://links.papareact.com/3ke"
+                    <img src={session?.user?.image}
                         className=" h-10 rounded-full cursor-pointer " alt="" />
                 </div>
             </div>
