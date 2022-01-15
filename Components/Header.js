@@ -11,7 +11,13 @@ import {
     MenuIcon
 } from "@heroicons/react/outline"
 import Image from 'next/image'
+import { useSession } from 'next-auth/react'
 function Header() {
+
+    const { data: session } = useSession()
+
+    console.log(session);
+
     return (
         <div className=" shadow-sm border-b bg-white z-50 top-0 sticky" >
             <div className=" flex justify-around p-3  items-center">
