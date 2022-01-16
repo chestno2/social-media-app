@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import faker from "@faker-js/faker"
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
 function Suggestion() {
     const [suggestions, setSuggestions] = useState([]);
 
@@ -15,6 +16,8 @@ function Suggestion() {
         ))
         setSuggestions(suggestions)
     }, [])
+
+    const { data: session } = useSession()
 
 
     return (
