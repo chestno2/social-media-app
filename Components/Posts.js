@@ -19,7 +19,7 @@ function Posts() {
         return unsubscribe
 
     }, [])
-    console.log(posts);
+
     return (
         <div>
             <div>
@@ -27,6 +27,7 @@ function Posts() {
                     posts.map(post => (
                         <Post key={post.id}
                             id={post.id}
+                            userId={post.data().userId}
                             username={post.data().username}
                             userImg={post.data().profileImg}
                             img={post.data().image}

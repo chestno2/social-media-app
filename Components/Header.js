@@ -31,13 +31,8 @@ function Header() {
             <div className="flex justify-between max-w-6xl mx-5 lg:mx-auto">
 
                 {/* left icon*/}
-                <div onClick={() => router.push('/')} className="relative hidden lg:inline-grid w-24 cursor-pointer">
-                    <Image
-                        src='https://links.papareact.com/ocw'
-                        layout='fill'
-                        objectFit='contain'
-                        alt=''
-                    />
+                <div onClick={() => router.push('/')} className="relative hidden lg:inline-grid w-24 pt-2 cursor-pointer">
+                    ANAGRAM
                 </div>
                 <div onClick={() => router.push('/')} className="relative w-10 lg:hidden flex-shrink-0 cursor-pointer">
                     <Image
@@ -76,7 +71,7 @@ function Header() {
                             </div>
                             <PlusCircleIcon onClick={() => setOpen(true)} className='navBtn' />
                             <UserGroupIcon className='navBtn' />
-                            <HeartIcon className='navBtn' />
+
                             <Image onClick={signOut}
                                 width={40}
                                 height={40}
