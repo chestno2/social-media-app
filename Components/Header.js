@@ -31,8 +31,13 @@ function Header() {
             <div className="flex justify-between max-w-6xl mx-5 lg:mx-auto">
 
                 {/* left icon*/}
-                <div onClick={() => router.push('/')} className="relative hidden lg:inline-grid w-24 pt-2 cursor-pointer">
-                    ANAGRAM
+                <div onClick={() => router.push('/')} className="relative hidden lg:inline-grid w-24 cursor-pointer">
+                    <Image
+                        src='https://links.papareact.com/ocw'
+                        layout='fill'
+                        objectFit='contain'
+                        alt=''
+                    />
                 </div>
                 <div onClick={() => router.push('/')} className="relative w-10 lg:hidden flex-shrink-0 cursor-pointer">
                     <Image
