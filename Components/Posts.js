@@ -3,22 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { db } from '../firebase';
 import Post from './Post'
 
-// const posts = [
-//     {
-//         id: '123',
-//         username: "Atul",
-//         userImg: "https://links.papareact.com/ocw",
-//         img: "https://links.papareact.com/jjm",
-//         caption: "YO! what is up"
-//     },
-//     {
-//         id: '153',
-//         username: "Atul",
-//         userImg: "https://links.papareact.com/jjm",
-//         img: "https://links.papareact.com/ocw",
-//         caption: "YO! what is up"
-//     }
-// ]
+
 
 
 function Posts() {
@@ -33,7 +18,7 @@ function Posts() {
 
         return unsubscribe
 
-    }, [db])
+    }, [])
     console.log(posts);
     return (
         <div>

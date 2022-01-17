@@ -114,6 +114,7 @@ function Modal() {
                             <div>
 
                                 {selectedFile ? (
+                                    // eslint-disable-next-line @next/next/no-img-element
                                     <img src={selectedFile} onClick={() => setSelectedFile(null)} alt='' className='w-full object-contain cursor-pointer' />
                                 ) : (
                                     <div onClick={() => filePickerRef.current.click()}

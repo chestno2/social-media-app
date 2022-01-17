@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { BookmarkIcon, ChatIcon, DotsCircleHorizontalIcon, EmojiHappyIcon, HeartIcon, PaperAirplaneIcon } from '@heroicons/react/solid'
 import { addDoc, collection, doc, onSnapshot, orderBy, query, serverTimestamp, setDoc } from 'firebase/firestore';
 import { useSession } from 'next-auth/react';
@@ -7,7 +8,6 @@ import { db } from '../firebase';
 import ReactTimeago from "react-timeago"
 function Post({ username, id, img, userImg, caption }) {
     console.log(id);
-    console.log(userImg);
     const { data: session } = useSession()
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState('');
@@ -21,7 +21,7 @@ function Post({ username, id, img, userImg, caption }) {
             (snapshot) =>
                 setComments(snapshot.docs)
         ),
-        [db, id]
+        [id]
     );
     const sendComment = async (e) => {
         e.preventDefault();
@@ -42,7 +42,7 @@ function Post({ username, id, img, userImg, caption }) {
         <div>
             <div className=" bg-white my-7 border rounded-sm ">
                 <div className="flex items-center p-5" >
-                    <Image src={userImg}
+                    <Image src={session.user.image}
                         width={48}
                         height={48}
                         className="h-12 w-12 object-contain 

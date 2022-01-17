@@ -15,7 +15,7 @@ function MiniProfile() {
                             <Image className=" rounded-full border p-[2px]"
                                 src={session.user.image}
                                 width={60}
-                                height={10}
+                                height={20}
                                 alt="" />
 
                             <div className=" flex-1 mx-4 " >
